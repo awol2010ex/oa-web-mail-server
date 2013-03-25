@@ -187,7 +187,7 @@
             <!--     markseen -->
             <!--         if true, messages left on the server will be marked as seen -->
             <!--         if false, messages left on the server will not be marked as seen -->            
-            <maxmessagesize limit="0" reject="false" leaveonserver="true" markseen="false"/>
+            <maxmessagesize limit="31457280" reject="true" leaveonserver="true" markseen="false"/>
             
             <!-- Specify what happens to undeliverable messages -->
             <!-- leaveonserver -->
