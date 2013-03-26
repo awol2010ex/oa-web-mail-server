@@ -217,7 +217,7 @@
          <!-- Check attachment extensions for possible viruses -->
          <!-- The "-z" option requests the check to be non-recursively applied -->
          <!-- to the contents of any attached '*.zip' file. -->
-         <!-- 
+         
          <mailet match="AttachmentFileNameIs=-d -z *.exe *.com *.bat *.cmd *.pif *.scr *.vbs *.avi *.mp3 *.mpeg *.shs" class="Bounce" onMatchException="error">
             <inline>heads</inline>
             <attachment>none</attachment>
@@ -232,7 +232,7 @@ Regards, Postmaster XXX.YYY
 .....................................
             </notice>
          </mailet>
-         -->
+         
 
          <!-- Whitelist Management -->
          <!-- Manages for each local user a "white list" of remote addresses whose messages -->
@@ -373,6 +373,16 @@ Regards, Postmaster XXX.YYY
            <processor> transport </processor>
          </mailet>
 
+         
+         <!-- 黑名单 -->
+            <mailet match="InSpammerBlacklist=cblplus.anti-spam.org.cn" class="ToProcessor">
+                <processor> spam </processor>
+                <notice>550 Requested action not taken: rejected - see http://anti-spam.org.cn/ </notice>
+            </mailet>
+            <mailet match="InSpammerBlacklist=dnsbl.njabl.org" class="ToProcessor">
+                <processor> spam </processor>
+                <notice>550 Requested action not taken: rejected - see http://njabl.org/ </notice>
+            </mailet>
          <!-- E-mail legally required not to be spam (see: http://www.habeas.com) -->
          <!--
          <mailet match="HasHabeasWarrantMark" class="ToProcessor">
