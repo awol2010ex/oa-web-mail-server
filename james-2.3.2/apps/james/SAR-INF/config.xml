@@ -682,7 +682,7 @@ Regards, Postmaster XXX.YYY
             
             <!-- Set the HELO/EHLO name to use when connectiong to remote SMTP-Server -->
             <!--
-            <mail.smtp.localhost>myMailServer</mail.smtp.localhost>
+            <mail.smtp.localhost>ghacoa.cn</mail.smtp.localhost>
             -->
          </mailet>
 
@@ -884,7 +884,7 @@ Regards, Postmaster XXX.YYY
          <!-- own host name and use that in the protocol.  If discovery fails, -->
          <!-- the value of 'localhost' is used.  If autodetect is FALSE, James -->
          <!-- will use the specified value. -->
-         <helloName autodetect="true">myMailServer</helloName>
+         <helloName autodetect="true">ghacoa.cn</helloName>
          <administrator_accounts>
 <!-- CHECKME! -->
             <!-- Change the default login/password. -->
@@ -921,7 +921,7 @@ Regards, Postmaster XXX.YYY
          <!-- own host name and use that in the protocol.  If discovery fails, -->
          <!-- the value of 'localhost' is used.  If autodetect is FALSE, James -->
          <!-- will use the specified value. -->
-         <helloName autodetect="true">myMailServer</helloName>
+         <helloName autodetect="true">ghacoa.cn</helloName>
          <connectiontimeout>120000</connectiontimeout>
       </handler>
    </pop3server>
@@ -950,7 +950,7 @@ Regards, Postmaster XXX.YYY
          <!-- own host name and use that in the protocol.  If discovery fails, -->
          <!-- the value of 'localhost' is used.  If autodetect is FALSE, James -->
          <!-- will use the specified value. -->
-         <helloName autodetect="true">myMailServer</helloName>
+         <helloName autodetect="true">ghacoa.cn</helloName>
          <connectiontimeout>360000</connectiontimeout>
 
          <!--  Uncomment this if you want to require SMTP authentication.
@@ -965,9 +965,9 @@ Regards, Postmaster XXX.YYY
                some webmail client fails when AUTH is announced but no authentication
                information has been provided
           -->
-         <!--
+         
          <authRequired>true</authRequired>
-         -->
+       
 
 <!-- CHECKME! -->
          <!--  Uncomment this if you want to authorize specific addresses/networks.
@@ -1042,7 +1042,7 @@ Regards, Postmaster XXX.YYY
          <!-- own host name and use that in the protocol.  If discovery fails, -->
          <!-- the value of 'localhost' is used.  If autodetect is FALSE, James -->
          <!-- will use the specified value. -->
-         <helloName autodetect="true">myMailServer</helloName>
+         <helloName autodetect="true">ghacoa.cn</helloName>
          <connectiontimeout>120000</connectiontimeout>
           <!-- Set the authRequired value to true to enable authenticated NNTP -->
          <authRequired>false</authRequired>
