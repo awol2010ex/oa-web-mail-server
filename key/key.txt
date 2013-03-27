@@ -1,0 +1,10 @@
+keytool -genkey -alias james -keyalg RSA -keystore "E:\Downloads\apache-james-2.3.2\james-2.3.2\apps\james\conf\james.keystore"
+
+
+keytool -export -keyalg RSA -alias james     -file "E:\Downloads\apache-james-2.3.2\key\certreq.csr" -keystore "E:\Downloads\apache-james-2.3.2\james-2.3.2\apps\james\conf\james.keystore"
+
+
+//keytool -import -alias james -keystore "%JAVA_HOME%/JRE/LIB/SECURITY/CACERTS"  -trustcacerts -file "E:\Downloads\apache-james-2.3.2\key\certreq.csr"
+
+
+keytool.exe -import -alias james -file "E:\Downloads\apache-james-2.3.2\key\certreq.csr"  -noprompt -trustcacerts -storetype jks -keystore cacerts -storepass changeit
