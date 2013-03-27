@@ -385,46 +385,53 @@ Regards, Postmaster XXX.YYY
             </mailet>
             
             <!--从标题判断是否垃圾邮件-->
-            <mailet match="SubjectMatches=^(?i)[\w\s\p{Punct}]+$, ^(?i).*a.*d.*$, ^.{0}$, ^.*代.*(开|理).*$, ^.*业.*务.*, ^.*网?.*赚.*钱?.*$, ^.*税.*$" class="ToProcessor">
-                <processor> spam </processor>
-                 <passThrough>false</passThrough>
-                 <prefix>[REJECTED]</prefix>
+            <mailet match="SubjectMatches=^(?i)[\w\s\p{Punct}]+$, ^(?i).*a.*d.*$, ^.{0}$, ^.*代.*(开|理).*$, ^.*业.*务.*, ^.*网?.*赚.*钱?.*$, ^.*税.*$" class="Bounce">
+                 <inline>heads</inline>
+            <attachment>none</attachment>
+            <passThrough>false</passThrough>
+            <prefix>[REJECTED]</prefix>
                  <notice>拒绝广告垃圾邮件</notice>
             </mailet>
-            <mailet match="SubjectMatches=^.*[报海].*关.*$, ^.*[财税].*务.*$, ^.*[发?机税].*票.*$, ^.*合.*作.*$, ^.*客.*户.*$" class="ToProcessor">
-                <processor> spam </processor>
-                <passThrough>false</passThrough>
-                 <prefix>[REJECTED]</prefix>
+            <mailet match="SubjectMatches=^.*[报海].*关.*$, ^.*[财税].*务.*$, ^.*[发?机税].*票.*$, ^.*合.*作.*$, ^.*客.*户.*$" class="Bounce">
+                 <inline>heads</inline>
+            <attachment>none</attachment>
+            <passThrough>false</passThrough>
+            <prefix>[REJECTED]</prefix>
                  <notice>拒绝广告垃圾邮件</notice>
             </mailet>
-            <mailet match="SubjectMatches=^.*((商.*务)|(免.*费)|(生.*意)|(禁.*片)|(成.*人)|(商.*品)|(贸.*易)).*$" class="ToProcessor">
-                <processor> spam </processor>
-                <passThrough>false</passThrough>
-                 <prefix>[REJECTED]</prefix>
+            <mailet match="SubjectMatches=^.*((商.*务)|(免.*费)|(生.*意)|(禁.*片)|(成.*人)|(商.*品)|(贸.*易)).*$" class="Bounce">
+                   <inline>heads</inline>
+            <attachment>none</attachment>
+            <passThrough>false</passThrough>
+            <prefix>[REJECTED]</prefix>
                  <notice>拒绝广告垃圾邮件</notice>
             </mailet>
-            <mailet match="SubjectMatches=^.*((管.*理)|(人.*才)|(经.*理)|(主.*管)|(会.*计)|(供.*求)|(求.*供)|(特.*价)|(价.*[格值])|(资.*[讯信])).*$" class="ToProcessor">
-                <processor> spam </processor>
-                <passThrough>false</passThrough>
-                 <prefix>[REJECTED]</prefix>
+            <mailet match="SubjectMatches=^.*((管.*理)|(人.*才)|(经.*理)|(主.*管)|(会.*计)|(供.*求)|(求.*供)|(特.*价)|(价.*[格值])|(资.*[讯信])).*$" class="Bounce">
+                <inline>heads</inline>
+            <attachment>none</attachment>
+            <passThrough>false</passThrough>
+            <prefix>[REJECTED]</prefix>
                  <notice>拒绝广告垃圾邮件</notice>
             </mailet>
-            <mailet match="SubjectMatches=^.*((电.*机)|(课.*程)|(产.*品)|(展.*览)|(互.*利)|(利.*[用益])|(朋.*友)|(粤.*美.*特)|(什么时候过来)|(金耀才)|(破解)|(林先生)|(找工作真)|(性生活)|(串口)|(嘉华)).*$" class="ToProcessor">
-                <processor> spam </processor>
-                <passThrough>false</passThrough>
-                 <prefix>[REJECTED]</prefix>
+            <mailet match="SubjectMatches=^.*((电.*机)|(课.*程)|(产.*品)|(展.*览)|(互.*利)|(利.*[用益])|(朋.*友)|(粤.*美.*特)|(什么时候过来)|(金耀才)|(破解)|(林先生)|(找工作真)|(性生活)|(串口)|(嘉华)).*$" class="Bounce">
+                 <inline>heads</inline>
+            <attachment>none</attachment>
+            <passThrough>false</passThrough>
+            <prefix>[REJECTED]</prefix>
                  <notice>拒绝广告垃圾邮件</notice>
             </mailet>
-            <mailet match="SubjectMatches=^.*((专治痔疮)|(投合)|(性知识)).*$" class="ToProcessor">
-                <processor> spam </processor>
-                <passThrough>false</passThrough>
-                 <prefix>[REJECTED]</prefix>
+            <mailet match="SubjectMatches=^.*((专治痔疮)|(投合)|(性知识)).*$" class="Bounce">
+                   <inline>heads</inline>
+            <attachment>none</attachment>
+            <passThrough>false</passThrough>
+            <prefix>[REJECTED]</prefix>
                  <notice>拒绝广告垃圾邮件</notice>
             </mailet>
-            <mailet match="SubjectMatches=^.*(回.*[复信])$" class="ToProcessor">
-                <processor> spam </processor>
-                <passThrough>false</passThrough>
-                 <prefix>[REJECTED]</prefix>
+            <mailet match="SubjectMatches=^.*(回.*[复信])$" class="Bounce">
+                 <inline>heads</inline>
+            <attachment>none</attachment>
+            <passThrough>false</passThrough>
+            <prefix>[REJECTED]</prefix>
                  <notice>拒绝广告垃圾邮件</notice>
             </mailet>
             
