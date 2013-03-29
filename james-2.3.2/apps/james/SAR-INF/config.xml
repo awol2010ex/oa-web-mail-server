@@ -435,6 +435,15 @@ Regards, Postmaster XXX.YYY
                  <notice>拒绝广告垃圾邮件</notice>
             </mailet>
             
+            
+            
+             <mailet match="BeyondCapacityMatches" class="Bounce">
+                 <inline>heads</inline>
+            <attachment>none</attachment>
+            <passThrough>false</passThrough>
+            <prefix>[REJECTED]</prefix>
+                 <notice>该邮箱容量已满</notice>
+            </mailet>
          <!-- E-mail legally required not to be spam (see: http://www.habeas.com) -->
          <!--
          <mailet match="HasHabeasWarrantMark" class="ToProcessor">
