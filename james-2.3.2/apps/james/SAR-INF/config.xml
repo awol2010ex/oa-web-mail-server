@@ -49,7 +49,7 @@
       <!-- Set this to the appropriate email address for error reports -->
       <!-- If this is set to a non-local email address, the mail server -->
       <!-- will still function, but will generate a warning on startup. -->
-      <postmaster>Postmaster@ghacoa.cn</postmaster>
+      <postmaster>Postmaster@dealer.ghac.cn</postmaster>
 
       <!-- servernames identifies the DNS namespace served by this instance of James. -->
       <!-- These servernames are used for both matcher/mailet processing and SMTP auth -->
@@ -70,7 +70,7 @@
       <!-- fetched domains in the server name list to prevent looping.       -->
       <servernames autodetect="false" autodetectIP="false">
 <!-- CONFIRM? -->
-         <servername>ghacoa.cn</servername>
+         <servername>dealer.ghac.cn</servername>
       </servernames>
 
       <!-- Set whether user names are case sensitive or case insensitive -->
@@ -691,7 +691,7 @@ Regards, Postmaster XXX.YYY
             
             <!-- Set the HELO/EHLO name to use when connectiong to remote SMTP-Server -->
             <!--
-            <mail.smtp.localhost>ghacoa.cn</mail.smtp.localhost>
+            <mail.smtp.localhost>dealer.ghac.cn</mail.smtp.localhost>
             -->
          </mailet>
 
@@ -893,7 +893,7 @@ Regards, Postmaster XXX.YYY
          <!-- own host name and use that in the protocol.  If discovery fails, -->
          <!-- the value of 'localhost' is used.  If autodetect is FALSE, James -->
          <!-- will use the specified value. -->
-         <helloName autodetect="true">ghacoa.cn</helloName>
+         <helloName autodetect="true">dealer.ghac.cn</helloName>
          <administrator_accounts>
 <!-- CHECKME! -->
             <!-- Change the default login/password. -->
@@ -930,7 +930,7 @@ Regards, Postmaster XXX.YYY
          <!-- own host name and use that in the protocol.  If discovery fails, -->
          <!-- the value of 'localhost' is used.  If autodetect is FALSE, James -->
          <!-- will use the specified value. -->
-         <helloName autodetect="true">ghacoa.cn</helloName>
+         <helloName autodetect="true">dealer.ghac.cn</helloName>
          <connectiontimeout>120000</connectiontimeout>
       </handler>
    </pop3server>
@@ -959,7 +959,7 @@ Regards, Postmaster XXX.YYY
          <!-- own host name and use that in the protocol.  If discovery fails, -->
          <!-- the value of 'localhost' is used.  If autodetect is FALSE, James -->
          <!-- will use the specified value. -->
-         <helloName autodetect="true">ghacoa.cn</helloName>
+         <helloName autodetect="true">dealer.ghac.cn</helloName>
          <connectiontimeout>360000</connectiontimeout>
 
          <!--  Uncomment this if you want to require SMTP authentication.
@@ -1051,7 +1051,7 @@ Regards, Postmaster XXX.YYY
          <!-- own host name and use that in the protocol.  If discovery fails, -->
          <!-- the value of 'localhost' is used.  If autodetect is FALSE, James -->
          <!-- will use the specified value. -->
-         <helloName autodetect="true">ghacoa.cn</helloName>
+         <helloName autodetect="true">dealer.ghac.cn</helloName>
          <connectiontimeout>120000</connectiontimeout>
           <!-- Set the authRequired value to true to enable authenticated NNTP -->
          <authRequired>false</authRequired>
@@ -1345,10 +1345,10 @@ Regards, Postmaster XXX.YYY
       </data-source>
       -->
 <data-source name="maildb" class="org.apache.james.util.dbcp.JdbcDataSource">
-         <driver>com.mysql.jdbc.Driver</driver>
-         <dburl>jdbc:mysql://localhost:3306/gomovie</dburl>
-         <user>root</user>
-         <password>root</password>
+         <driver>com.ibm.db2.jcc.DB2Driver</driver>
+         <dburl>jdbc:db2://10.251.68.109:50000/OATEST</dburl>
+         <user>oa</user>
+         <password>oa</password>
          <max>20</max>
       </data-source>
       <!-- Example, connecting to a Microsoft MSSQL database called "mail" on localhost-->
