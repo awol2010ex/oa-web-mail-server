@@ -1346,9 +1346,9 @@ Regards, Postmaster XXX.YYY
       -->
 <data-source name="maildb" class="org.apache.james.util.dbcp.JdbcDataSource">
          <driver>com.ibm.db2.jcc.DB2Driver</driver>
-         <dburl>jdbc:db2://10.251.68.109:50000/OATEST</dburl>
-         <user>oa</user>
-         <password>oa</password>
+         <dburl>jdbc:db2://10.251.68.122:50000/JAMES</dburl>
+         <user>db2inst1</user>
+         <password>Abcd1234</password>
          <max>20</max>
       </data-source>
       <!-- Example, connecting to a Microsoft MSSQL database called "mail" on localhost-->
