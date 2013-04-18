@@ -127,7 +127,7 @@ JVM_EXT_DIRS="$PHOENIX_HOME/lib:$PHOENIX_HOME/tools/lib"
 if $cygwin; then
   JVM_EXT_DIRS=`cygpath --path --windows "$JVM_EXT_DIRS"`
 fi
-JVM_OPTS="-Djava.ext.dirs=$JVM_EXT_DIRS"
+JVM_OPTS="-Djava.ext.dirs=$JVM_EXT_DIRS   -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.port=1090 -Djava.rmi.server.hostname=10.251.68.122 "
 
 if [ "$PHOENIX_SECURE" != "false" ] ; then
   # Make phoenix run with security manager enabled

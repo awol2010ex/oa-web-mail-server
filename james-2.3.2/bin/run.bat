@@ -78,7 +78,7 @@ set PHOENIX_SM="-Djava.security.manager"
 
 rem Make sure we don't run with a never expiring cache for InetAddress
 rem In Phoenix Main this is read and applied as Security.setProperty
-set PHOENIX_JVM_OPTS=%PHOENIX_JVM_OPTS% -Dnetworkaddress.cache.ttl=300
+set PHOENIX_JVM_OPTS=%PHOENIX_JVM_OPTS% -Dnetworkaddress.cache.ttl=300 -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.port=1090 
 
 rem
 rem -Djava.ext.dirs= is needed as some JVM vendors do foolish things
